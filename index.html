@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Dark mode by default with Bootstrap 5.">
-    <meta name="author" content="Your Name">
-    <meta name="keywords" content="HTML, CSS, Bootstrap 5, Dark Mode">
+    <meta name="description" content="Arichikurumos Expert Profile">
+    <meta name="author" content="Arichikurumo">
+    <meta name="keywords" content="IT-Security, Arichikurumo, Offensive Security, Hacking, IT-Services">
     
-    <title>Dark Mode Bootstrap 5</title>
+    <title>Arichikurumos Website</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,37 +17,116 @@
     <style>
         body {
             padding-top: 56px;
-            background-color: #121212;
-            color: #ffffff;
         }
-        .navbar {
-            background-color: #333333;
+
+        /* Default light mode */
+        body {
+            background-color: #ffffff;
+            color: #000000;
         }
-        .container {
-            background-color: #222222;
-            padding: 20px;
-            border-radius: 8px;
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .navbar {
+                background-color: #333333;
+            }
+
+            .container {
+                background-color: #222222;
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            .icon-circle {
+                width: 100px; /* Adjust the size of the circle */
+                height: 100px;
+                background-color: #ffffff; /* Optional: background color for the circle */
+                border-radius: 50%; /* Makes the image a circle */
+                overflow: hidden; /* Ensures image stays inside the circle */
+                margin: 0 auto 20px; /* Centers the icon and adds space below */
+            }
+
+            .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #88090d;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            }
+
+            .feature-icon svg {
+                width: 1.5em;
+                height: 1.5em;
+            }
+
+            .feature-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+            .feature-text {
+                color: #afb1b3;
+            }
+
+            .table-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            align-items: center;
+            width: 100%; /* Full width of the screen */
+            }
+
+            table {
+                width: 50%; 
+                border-collapse: separate;
+                border: 1px solid white;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            
+            th, td {
+            padding: 5px;
+            text-align: center;
+            }
+        }
+
+        /* Change navbar-toggler-icon to white */
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
     </style>
 </head>
 <body>
-    <!-- Dark Mode Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Dark Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-white" aria-current="page" href="#expertise">Expertise</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link text-white" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link text-white" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">CTFs</a>
                     </li>
                 </ul>
             </div>
@@ -56,10 +135,68 @@
 
     <!-- Main Content -->
     <div class="container mt-5 text-white">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col">
-                <h1 class="text-center">Hello, I'm Arichikurumo</h1>
-                <p class="lead text-center">I am a recent graduate with a profound interest in technology and a dedication to solving complex problems.</p>
+                <div class="icon-circle">
+                    <img src=".\Assets\arichikurumo-icon.jpg" alt="Icon">
+                </div>
+                <h1 class="text-center mb-3">Hello, I am Arichikurumo</h1>
+                <p class="lead text-center">I am an IT-Security professional with a profound interest in technology and a dedication to solving complex problems.</p>
+                
+                <div class="container py-5 mt-5" id="feature-module">
+                    <h2 id="expertise" class="pb-4 text-center">Expertise</h2>
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                                    <path d="M2.5 11V1h11v10h1V1a1 1 0 0 0-1-1h-11a1 1 0 0 0-1 1v10h1z"/>
+                                    <path d="M5.5 15V3h7v12h-7z"/>
+                                    <path d="M1.5 13a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v2h-13v-2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Offensive Security</h3>
+                            <p class="feature-text">With extensive experience in identifying and exploiting security flaws across networks, applications, and systems, I help organizations strengthen their defenses against evolving cyber threats. My deep knowledge of advanced attack techniques and methodologies, coupled with hands-on experience, ensures a thorough assessment of security posture and actionable strategies to mitigate risks.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M5.5 3a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM11 8c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">IT-Regulation</h3>
+                            <p class="feature-text">With extensive experience navigating complex legal requirements, I help organizations develop robust compliance strategies, implement effective governance, and mitigate risks. My deep understanding of regulatory policies and best practices ensures that businesses operate within legal boundaries while maintaining data security and privacy.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-toggles2" viewBox="0 0 16 16">
+                                    <path d="M8.5 9.5v-3h-1v3h1zm-4.5 3a2.5 2.5 0 0 1-2.45-2h4.9a2.5 2.5 0 0 1-2.45 2zm0 1a3.5 3.5 0 0 0 3.45-3H1.05a3.5 3.5 0 0 0 3.45 3zm7-8a2.5 2.5 0 0 1 2.45 2h-4.9a2.5 2.5 0 0 1 2.45-2zm0-1a3.5 3.5 0 0 0-3.45 3h6.9a3.5 3.5 0 0 0-3.45-3z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Trainings</h3>
+                            <p class="feature-text">With hands-on experience in developing interactive training programs, I help organizations strengthen their security culture by teaching employees how to identify phishing attempts, social engineering tactics, and other manipulation techniques. My approach equips individuals with the knowledge and skills to respond effectively to potential threats, reducing the risk of security breaches caused by human error.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container mt-3" id="skill-module"></div>
+                <h2 id="skills" class="pb-3 text-center">Skills</h2>
+                    <div class="table-container px-4">   
+                            <table border="1">
+                                <tr>
+                                    <th>Aquired Skill</th>
+                                    <th>Associated Project</th>
+                                </tr>
+                                <tr>
+                                    <td>Basic Cryptographic Knowledge</td>
+                                    <td><a href="https://github.com/Arichikurumo/Ciphermachine">Ciphermachine</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Networking</td>
+                                    <td><a href="https://github.com/Arichikurumo/">HTTP Proxy</a></td>
+                                </tr>
+                            </table>
+                    </div>  
+                </div>    
             </div>
         </div>
     </div>
